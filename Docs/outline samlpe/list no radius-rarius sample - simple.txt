@@ -1,0 +1,60 @@
+no radius sample
+Select objects:
+
+                  LWPOLYLINE  Layer: "Layer1"
+                            Space: Model space
+                   Handle = 409
+              Open
+    Constant width    0.0000
+              area   210.9700
+            length   76.6621
+
+          at point  X=  16.1270  Y=  -6.1270  Z=   0.0000
+          at point  X=  16.1270  Y= -22.7865  Z=   0.0000
+          at point  X=  40.2986  Y= -22.7865  Z=   0.0000
+          at point  X=  40.2986  Y= -16.1270  Z=   0.0000
+          at point  X=  21.1270  Y= -16.1270  Z=   0.0000
+          at point  X=  21.1270  Y=  -6.1270  Z=   0.0000
+
+
+radius sample
+Select objects:
+
+                  LWPOLYLINE  Layer: "Layer1"
+                            Space: Model space
+                   Handle = 409
+              Open
+    Constant width    0.0000
+              area   209.2532
+            length   73.2285
+
+          at point  X=  16.1270  Y=  -6.1270  Z=   0.0000
+          at point  X=  16.1270  Y= -20.7865  Z=   0.0000
+             bulge    0.4142
+            center  X=  18.1270  Y= -20.7865  Z=   0.0000
+            radius    2.0000
+       start angle       180
+         end angle       270
+          at point  X=  18.1270  Y= -22.7865  Z=   0.0000
+          at point  X=  38.2986  Y= -22.7865  Z=   0.0000
+             bulge    0.4142
+            center  X=  38.2986  Y= -20.7865  Z=   0.0000
+            radius    2.0000
+       start angle       270
+         end angle         0
+          at point  X=  40.2986  Y= -20.7865  Z=   0.0000
+          at point  X=  40.2986  Y= -18.1270  Z=   0.0000
+             bulge    0.4142
+            center  X=  38.2986  Y= -18.1270  Z=   0.0000
+            radius    2.0000
+       start angle         0
+         end angle        90
+          at point  X=  38.2986  Y= -16.1270  Z=   0.0000
+          at point  X=  23.1270  Y= -16.1270  Z=   0.0000
+             bulge   -0.4142
+            center  X=  23.1270  Y= -14.1270  Z=   0.0000
+            radius    2.0000
+       start angle       270
+         end angle       180
+          at point  X=  21.1270  Y= -14.1270  Z=   0.0000
+          at point  X=  21.1270  Y=  -6.1270  Z=   0.0000

@@ -1,0 +1,108 @@
+Inventor export
+Select objects:
+
+                  CIRCLE    Layer: "0"
+                            Space: Model space
+                   Handle = 169b
+            center point, X=  22.1270  Y= -59.7274  Z=   0.0000
+            radius    2.5000
+     circumference   15.7080
+              area   19.6350
+
+                  LINE      Layer: "Visible Edges(ANSI)"
+                            Space: Model space
+                   Handle = 201
+              from point, X=  38.1270  Y= -70.1270  Z=   0.0000
+                to point, X=  17.1270  Y= -70.1270  Z=   0.0000
+          Length =  21.0000,  Angle in XY Plane =    180
+                  Delta X = -21.0000, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  ARC       Layer: "Visible Edges(ANSI)"
+                            Space: Model space
+                   Handle = 200
+            center point, X=  17.1270  Y= -69.1270  Z=   0.0000
+            radius    1.0000
+             start angle    180
+               end angle    270
+            length    1.5708
+
+                  LINE      Layer: "Visible Edges(ANSI)"
+                            Space: Model space
+                   Handle = 1ff
+              from point, X=  16.1270  Y= -69.1270  Z=   0.0000
+                to point, X=  16.1270  Y= -55.1270  Z=   0.0000
+          Length =  14.0000,  Angle in XY Plane =     90
+                  Delta X =   0.0000, Delta Y =   14.0000, Delta Z =   0.0000
+
+                  ARC       Layer: "Visible Edges(ANSI)"
+                            Space: Model space
+                   Handle = 1fe
+            center point, X=  17.1270  Y= -55.1270  Z=   0.0000
+            radius    1.0000
+             start angle     90
+               end angle    180
+            length    1.5708
+
+
+
+
+no radius sample
+Select objects:
+
+                  LWPOLYLINE  Layer: "Layer1"
+                            Space: Model space
+                   Handle = 409
+              Open
+    Constant width    0.0000
+              area   210.9700
+            length   76.6621
+
+          at point  X=  16.1270  Y=  -6.1270  Z=   0.0000
+          at point  X=  16.1270  Y= -22.7865  Z=   0.0000
+          at point  X=  40.2986  Y= -22.7865  Z=   0.0000
+          at point  X=  40.2986  Y= -16.1270  Z=   0.0000
+          at point  X=  21.1270  Y= -16.1270  Z=   0.0000
+          at point  X=  21.1270  Y=  -6.1270  Z=   0.0000
+
+
+radius sample
+Select objects:
+
+                  LWPOLYLINE  Layer: "Layer1"
+                            Space: Model space
+                   Handle = 409
+              Open
+    Constant width    0.0000
+              area   209.2532
+            length   73.2285
+
+          at point  X=  16.1270  Y=  -6.1270  Z=   0.0000
+          at point  X=  16.1270  Y= -20.7865  Z=   0.0000
+             bulge    0.4142
+            center  X=  18.1270  Y= -20.7865  Z=   0.0000
+            radius    2.0000
+       start angle       180
+         end angle       270
+          at point  X=  18.1270  Y= -22.7865  Z=   0.0000
+          at point  X=  38.2986  Y= -22.7865  Z=   0.0000
+             bulge    0.4142
+            center  X=  38.2986  Y= -20.7865  Z=   0.0000
+            radius    2.0000
+       start angle       270
+         end angle         0
+          at point  X=  40.2986  Y= -20.7865  Z=   0.0000
+          at point  X=  40.2986  Y= -18.1270  Z=   0.0000
+             bulge    0.4142
+            center  X=  38.2986  Y= -18.1270  Z=   0.0000
+            radius    2.0000
+       start angle         0
+         end angle        90
+          at point  X=  38.2986  Y= -16.1270  Z=   0.0000
+          at point  X=  23.1270  Y= -16.1270  Z=   0.0000
+             bulge   -0.4142
+            center  X=  23.1270  Y= -14.1270  Z=   0.0000
+            radius    2.0000
+       start angle       270
+         end angle       180
+          at point  X=  21.1270  Y= -14.1270  Z=   0.0000
+          at point  X=  21.1270  Y=  -6.1270  Z=   0.0000
