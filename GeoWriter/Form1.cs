@@ -63,34 +63,63 @@ namespace GeoWriter
 
         private void writeOutGeoFile(ArrayList commandList)
         {
+            int finalLineNumber = 0;
+            const int lineStartOffset = 4;
+
             using (TextWriter writer = File.CreateText(@"C:\Users\Boreas\Desktop\GeoOutput.txt"))
             {
-                for (int i = 0; i < commandList.Count; i++)
+                if (commandList[0].GetType().ToString() == "GeoWriter.Circle")
+                    initializeGeoFile(writer, (Circle)commandList[0]);
+                else
+                    throw new Exception("First exported object must be the origin \"Circle\"");
+                
+                for (int i = 1; i < commandList.Count; i++)
                 {
-                    commandList[i].GetType();
-
-                    if (commandList[i].GetType().Equals("GeoWriter.Arc"))
+                    if (commandList[i].GetType().ToString() == "GeoWriter.Arc")
                     {
-                        Arc arcToWrite = new Arc();
-                        arcToWrite = (Arc)commandList[i];
+                        Arc arcToWrite = (Arc)commandList[i];
                         MessageBox.Show(arcToWrite.writeCommand());
                     }
-                    else if (commandList[i].GetType().Equals("GeoWriter.Circle"))
+                    else if (commandList[i].GetType().ToString() == "GeoWriter.Circle")
                     {
-                        
+                        Circle cirlceToWrite = (Circle)commandList[i];
+                        MessageBox.Show(cirlceToWrite.writeCommand());
                     }
-                    else if (commandList[i].GetType().Equals("GeoWriter.Polyline"))
+                    else if (commandList[i].GetType().ToString() == "GeoWriter.Polyline")
                     {
                         writer.WriteLine("Polyline currently not supported at this time.");
                     }
-                    else if (commandList[i].GetType().Equals("GeoWriter.Line"))
+                    else if (commandList[i].GetType().ToString() == "GeoWriter.Line")
                     {
-                        
+                        Line lineToWrite = (Line)commandList[i];
+                        MessageBox.Show(lineToWrite.writeCommand());
                     }
-
-                    writer.WriteLine(commandList[i].GetType());
+                    
+                    writer.WriteLine("N" + String.Format("{0:000} ", i + lineStartOffset) + commandList[i].GetType());
+                    finalLineNumber = i + 1;
                 }
+
+                closeGeoFile(writer, (finalLineNumber + lineStartOffset));
             }
+        }
+
+        private void initializeGeoFile(TextWriter writer, Circle v)
+        {
+            if (v == null)
+                throw new Exception("Origin object is null.");
+            if (writer == null)
+                throw new Exception("Writer object is null.");
+
+            writer.WriteLine("%");
+            writer.WriteLine("N002 M63");
+            writer.WriteLine(String.Format("N003 G01 X+{0} Y-{1} G40 M22", v.centerPoint[0], v.centerPoint[1]));
+            writer.WriteLine("N004 D01 P01 S01 T01 G43");
+        }
+
+        private void closeGeoFile(TextWriter writer, int finalLineNumber)
+        {
+            writer.WriteLine("N" + String.Format("{0:000} ", finalLineNumber) + "G45");
+            writer.WriteLine("M02");
         }
 
         private object processPolyline(int i, string[] commandLines)

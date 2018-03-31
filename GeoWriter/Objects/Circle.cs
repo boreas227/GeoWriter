@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace GeoWriter
 {
@@ -8,5 +9,10 @@ namespace GeoWriter
         public decimal radius;
         public decimal circumference;
         public decimal area;
+
+        internal string writeCommand()
+        {
+            return "My awesome circle: " + radius.ToString() + circumference.ToString() + area.ToString();
+        }
     }
 }

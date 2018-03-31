@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace GeoWriter
 {
@@ -9,5 +10,10 @@ namespace GeoWriter
         public decimal length;
         public double angle;
         public ArrayList delta = new ArrayList();
+
+        internal string writeCommand()
+        {
+            return "A neat line: " + length.ToString() + angle.ToString();
+        }
     }
 }

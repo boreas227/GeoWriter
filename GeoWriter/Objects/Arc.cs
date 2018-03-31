@@ -14,7 +14,7 @@ namespace GeoWriter
 
         internal string writeCommand()
         {
-            throw new NotImplementedException();
+            return "A cool arc: " + radius.ToString() + startAngle.ToString() + endAngle.ToString() + length.ToString();
         }
     }
 }
